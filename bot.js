@@ -24,10 +24,10 @@ function sendrequest(){
     }).then((state) => {
         if (state.players.length == 1){
             onlineplayers = state.players.length + " Player Online"
-	    players = state.players
+	    players = state.raw
         } else {
             onlineplayers = state.players.length + " Players Online"
-	    players = state.players
+	    players = state.raw
         }
     }).catch((error) => {
     onlineplayers = "SERVER OFFLINE"
