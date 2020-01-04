@@ -62,7 +62,7 @@ function sendmessage(){
 	    .addField('Current Server Status', onlineplayers)
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
-	    .setFooter('Please DM a developer if this bot breaks', 'https://i.imgur.com/wSTFkRM.png');
+	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
         guild.channels.get('662008604563472416').send(exampleEmbed);
     }
 
