@@ -69,10 +69,10 @@ function sendmessage(){
 		if (!channel) return console.log('Unable to find channel.');
 	    
 	    try {
-		    const message = await channel.fetchMessage('663166437665406978');
+		    const message = channel.fetchMessage('663166437665406978');
 		    if (!message) return console.log('Unable to find message.');
 
-		    await message.edit(exampleEmbed);
+		    message.edit(exampleEmbed);
 		    console.log('Updated message');
 		} catch(err) {
 		    console.error(err);
