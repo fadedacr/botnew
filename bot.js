@@ -9,10 +9,10 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+//const PORT = process.env.PORT || 3000;
+//app.listen(PORT, () => {
+ //   console.log(`Our app is running on port ${ PORT }`);
+//});
 
 function sendrequest(){
     console.log("Sent request to server")
