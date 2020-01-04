@@ -73,7 +73,7 @@ client.on('message', message => {
     }
 });
 
-setInterval(sendmessage, 15000);
+//setInterval(sendmessage, 15000);
 sendrequest(); // at init so it shows the player count for the first 100 seconds
 setInterval(sendrequest, 100000);
 setInterval(updatename, 10000);
