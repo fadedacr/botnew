@@ -59,6 +59,7 @@ function sendmessage(){
 	    //.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
 	    .setDescription("Defined Networks is a premier Imperial RP server located on Garry's Mod. We strive to provide the best experience to our players and hope you enjoy our server as much as we do making it!")
 	    .setThumbnail('https://justatestasdasd.000webhostapp.com/menu/servericon.png')
+	    .addField('Server IP Address', '96.30.193.219:27015')
 	    .addField('Current Server Status', onlineplayers)
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
