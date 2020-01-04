@@ -54,19 +54,15 @@ function sendmessage(){
     if(guild && guild.channels.get('662008604563472416')){
         const exampleEmbed = new Discord.RichEmbed()
 	    .setColor('#0099ff')
-	    .setTitle('Some title')
-	    .setURL('https://discord.js.org/')
-	    .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-	    .setDescription('Some description here')
-	    .setThumbnail('https://i.imgur.com/wSTFkRM.png')
-	    .addField('Regular field title', 'Some value here')
-	    .addBlankField()
-	    .addField('Inline field title', 'Some value here', true)
-	    .addField('Inline field title', 'Some value here', true)
-	    .addField('Inline field title', 'Some value here', true)
-	    .setImage('https://i.imgur.com/wSTFkRM.png')
+	    .setTitle('[NEW!] Imperial RP - Hiring COs - Defined Network')
+	    .setURL('steam://connect/96.30.193.219:27015')
+	    //.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+	    .setDescription("Defined Networks is a premier Imperial RP server located on Garry's Mod. We strive to provide the best experience to our players and hope you enjoy our server as much as we do making it!")
+	    .setThumbnail('https://justatestasdasd.000webhostapp.com/menu/servericon.png')
+	    .addField('Current Server Status', onlineplayers)
+	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
-	    .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+	    .setFooter('Please DM a developer if this bot breaks', 'https://i.imgur.com/wSTFkRM.png');
         guild.channels.get('662008604563472416').send(exampleEmbed);
     }
 
