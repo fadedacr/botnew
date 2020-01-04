@@ -5,6 +5,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const Gamedig = require('gamedig');
 var onlineplayers = "24/7 Imperial RP"
+var players = "N/A"
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -23,11 +24,14 @@ function sendrequest(){
     }).then((state) => {
         if (state.players.length == 1){
             onlineplayers = state.players.length + " Player Online"
+	    players = state.players
         } else {
             onlineplayers = state.players.length + " Players Online"
+	    players = state.players
         }
     }).catch((error) => {
     onlineplayers = "SERVER OFFLINE"
+	players = "N/A"
     });
 }
 
@@ -61,22 +65,11 @@ function sendmessage(){
 	    .setThumbnail('https://justatestasdasd.000webhostapp.com/menu/servericon.png')
 	    .addField('Server IP Address', '96.30.193.219:27015')
 	    .addField('Current Server Status', onlineplayers)
+	    .addField('Current Players', players)
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
-        //guild.channels.get('662008604563472416').send(exampleEmbed);
-	    const channel = guild.channels.find(c => c.id === '662008604563472416'); //&& c.type === 'text');
-		if (!channel) return console.log('Unable to find channel.');
-	    
-	    try {
-		    const message = channel.fetchMessage('663166437665406978');
-		    if (!message) return console.log('Unable to find message.');
-
-		    message.edit(exampleEmbed);
-		    console.log('Updated message');
-		} catch(err) {
-		    console.error(err);
-		}
+        guild.channels.get('662008604563472416').send(exampleEmbed);
     }
 
 }
