@@ -45,6 +45,14 @@ function updateplayers(){
   .catch(console.error);
 }
 
+function sendmessage(){
+    var guild = client.guilds.get('417421748552728587');
+    if(guild && guild.channels.get('662008604563472416')){
+        guild.channels.get('662008604563472416').send("Good Morning");
+    }
+
+}
+
 function editmessage(){
     message.channel.fetchMessages({around: '662015148671631381', limit: 1})
     .then(msg => {
@@ -61,8 +69,9 @@ client.on('message', message => {
     }
 });
 
-sendrequest() // at init so it shows the player count for the first 100 seconds
-setInterval(sendrequest, 100000)
+setintreval(sendmessage, 15000);
+sendrequest(); // at init so it shows the player count for the first 100 seconds
+setInterval(sendrequest, 100000);
 setInterval(updatename, 10000);
 setInterval(updateplayers, 4600);
 
