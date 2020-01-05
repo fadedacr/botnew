@@ -69,7 +69,7 @@ function sendmessage(){
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
-        guild.channels.get('663172964858069022').send(exampleEmbed);
+        guild.channels.get('663172964858069022').send({ exampleEmbed });
     }
 
 }
