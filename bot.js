@@ -5,7 +5,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const Gamedig = require('gamedig');
 var onlineplayers = "24/7 Imperial RP"
-var players = "N/A"
+var map = "N/A"
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -24,14 +24,14 @@ function sendrequest(){
     }).then((state) => {
         if (state.players.length == 1){
             onlineplayers = state.players.length + " Player Online"
-	    players = state.raw
+	    map = state.map
         } else {
             onlineplayers = state.players.length + " Players Online"
-	    players = state.raw
+	    map = state.map
         }
     }).catch((error) => {
     onlineplayers = "SERVER OFFLINE"
-	players = "N/A"
+	map = "N/A"
     });
 }
 
@@ -65,7 +65,7 @@ function sendmessage(){
 	    .setThumbnail('https://justatestasdasd.000webhostapp.com/menu/servericon.png')
 	    .addField('Server IP Address', '96.30.193.219:27015')
 	    .addField('Current Server Status', onlineplayers)
-	    .addField('Current Players', players)
+	    .addField('Current Map', map)
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
