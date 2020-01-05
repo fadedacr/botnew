@@ -54,8 +54,8 @@ function updateplayers(){
 }
 
 function sendmessage(){
-    var guild = client.guilds.get('417421748552728587');
-    if(guild && guild.channels.get('662008604563472416')){
+    var guild = client.guilds.get('581921321446014987');
+    if(guild && guild.channels.get('663172964858069022')){
         const exampleEmbed = new Discord.RichEmbed()
 	    .setColor('#0099ff')
 	    .setTitle('[NEW!] Imperial RP - Hiring COs - Defined Network')
@@ -69,7 +69,7 @@ function sendmessage(){
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
-        guild.channels.get('662008604563472416').send(exampleEmbed);
+        guild.channels.get('663172964858069022').send(exampleEmbed);
     }
 
 }
@@ -90,7 +90,7 @@ client.on('message', message => {
     }
 });
 
-setInterval(sendmessage, 15000);
+setInterval(sendmessage, 30000);
 sendrequest() // at init so it shows the player count for the first 100 seconds
 setInterval(sendrequest, 100000);
 setInterval(updatename, 10000);
