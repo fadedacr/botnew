@@ -63,13 +63,13 @@ function sendmessage(){
 	    //.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
 	    .setDescription("Defined Networks is a premier Imperial RP server located on Garry's Mod. We strive to provide the best experience to our players and hope you enjoy our server as much as we do making it!")
 	    .setThumbnail('https://justatestasdasd.000webhostapp.com/menu/servericon.png')
-	    .addField('Server IP Address', '96.30.193.219:27015')
+	    .addField('Server IP Address', 'steam://connect/96.30.193.219:27015')
 	    .addField('Current Server Status', onlineplayers)
 	    .addField('Current Map', map)
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
-        guild.channels.get('662008604563472416').send({ exampleEmbed });
+        guild.channels.get('662008604563472416').send(exampleEmbed);
     }
 
 }
